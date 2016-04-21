@@ -1,0 +1,40 @@
+{
+    "private": true,
+    "version": "5.1.0",
+    "name": "aws-iot-project",
+    "description": "Node.js API Server (Demo) with Express 4.0 and Client sessions. To be used with the front-end companion.",
+    "keywords": [
+        "captcha",
+        "visualCaptcha",
+        "security",
+        "api",
+        "demo"
+    ],
+    "homepage": "http://visualcaptcha.net",
+    "author": {
+        "name": "Bruno Bernardino",
+        "email": "me@brunobernardino.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/emotionLoop/visualCaptcha-node"
+    },
+    "dependencies": {
+        "express": "4.10.x",
+        "body-parser": "1.9.x",
+        "client-sessions": "0.7.x",
+        "aws-iot-device-sdk":"*"
+    },
+    "devDependencies": {
+        "supertest": "0.14.x",
+        "mocha": "2.0.x",
+        "should": "4.1.x",
+        "istanbul": "0.3.x"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "test": "mocha --require should --reporter spec test/unit/*.js",
+        "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/unit/*.js"
+    },
+    "license": "MIT"
+}
